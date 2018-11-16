@@ -25,7 +25,9 @@ async def on_message(message):
             for i in range(int(winnumber)):
                 res.append(random.randint(1, int(maxnumber)))
 
-            res1 = str(res).replace("[", "")
+            res3 = sorted(res)
+
+            res1 = str(res3).replace("[", "")
             res2 = res1.replace("]", "")
             await client.send_message(message.channel, "<:raffle_token:510758274224750602> Winning numbers are:\n **" + res2 + "**")
                 
